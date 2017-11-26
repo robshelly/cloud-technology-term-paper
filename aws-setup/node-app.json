@@ -1,5 +1,5 @@
 {
-  "family": "php-app",
+  "family": "node-app",
   "volumes": [
       {
           "name": "my-vol",
@@ -9,7 +9,7 @@
   "containerDefinitions": [
       {
           "environment": [],
-          "name": "simple-app",
+          "name": "node-app",
           "image": "rshelly/sample-node-app:v_%BUILD_NUMBER%",
           "cpu": 10,
           "memory": 100,
@@ -39,7 +39,7 @@
           "memory": 100,
           "volumesFrom": [
           {
-            "sourceContainer": "simple-app"
+            "sourceContainer": "node-app"
           }
           ],
           "entryPoint": [

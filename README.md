@@ -1,7 +1,7 @@
 # Cloud Technolog Term Paper
 
 This repo contains the script and associated files for setting up the initial infrastructure for the practical element of the term paper.
-Also containes is a very basic sample node app which is used ass the app to be deployed in the practical element.
+Also contained is a very basic sample node app which is used as the app to be deployed in the practical element.
 
 ## Description of Term Paper
 
@@ -22,7 +22,7 @@ This script will create the following AWS resources:
 
 ## Other Resources
 
-The following tutorial was used asa guide for the practical work:
+The following tutorial was used as a guide for the practical work:
 
 [Set up a build pipeline with Jenkins and Amazon ECS
 ](https://aws.amazon.com/blogs/devops/set-up-a-build-pipeline-with-jenkins-and-amazon-ecs/)

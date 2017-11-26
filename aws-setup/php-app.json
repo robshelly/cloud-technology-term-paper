@@ -12,7 +12,7 @@
           "name": "simple-app",
           "image": "rshelly/amazon-ecs-sample:v_%BUILD_NUMBER%",
           "cpu": 10,
-          "memory": 100,
+          "memory": 500,
           "portMappings": [
               {
                   "containerPort": 80,
@@ -31,25 +31,6 @@
               "FOREGROUND"
           ],
           "essential": true
-      },
-      {
-          "name": "busybox",
-          "image": "busybox",
-          "cpu": 10,
-          "memory": 100,
-          "volumesFrom": [
-          {
-            "sourceContainer": "simple-app"
-          }
-          ],
-          "entryPoint": [
-              "sh",
-              "-c"
-          ],
-          "command": [
-              "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
-          ],
-          "essential": false
       }
   ]
 }

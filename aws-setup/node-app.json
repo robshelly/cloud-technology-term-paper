@@ -1,55 +1,32 @@
 {
-  "family": "node-app",
-  "volumes": [
-      {
-          "name": "my-vol",
-          "host": {}
-      }
-  ],
-  "containerDefinitions": [
-      {
-          "environment": [],
-          "name": "node-app",
-          "image": "rshelly/sample-node-app:v_%BUILD_NUMBER%",
-          "cpu": 10,
-          "memory": 100,
-          "portMappings": [
-              {
-                  "containerPort": 3000,
-                  "hostPort": 80
-              }
-          ],
-          "mountPoints": [
-              {
-                  "sourceVolume": "my-vol",
-                  "containerPath": "/var/www/my-vol"
-              }
-          ],
-          "entryPoint": [
-              "/usr/sbin/apache2",
-              "-D",
-              "FOREGROUND"
-          ],
-          "essential": true
-      },
-      {
-          "name": "busybox",
-          "image": "busybox",
-          "cpu": 10,
-          "memory": 100,
-          "volumesFrom": [
-          {
-            "sourceContainer": "node-app"
-          }
-          ],
-          "entryPoint": [
-              "sh",
-              "-c"
-          ],
-          "command": [
-              "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
-          ],
-          "essential": false
-      }
-  ]
-}
+    "family": "node-app",
+    "volumes": [
+        {
+            "name": "my-vol",
+            "host": {}
+        }
+    ],
+    "containerDefinitions": [
+        {
+            "environment": [],
+            "name": "node-app",
+            "image": "rshelly/sample-node-app:v_%BUILD_NUMBER%",
+            "cpu": 10,
+            "memory": 500,
+            "portMappings": [
+                {
+                    "containerPort": 3000,
+                    "hostPort": 80
+                }
+            ],
+            "mountPoints": [
+                {
+                    "sourceVolume": "my-vol",
+                    "containerPath": "/var/www/my-vol"
+                }
+            ],
+            "essential": true
+        }
+    ]
+  }
+  

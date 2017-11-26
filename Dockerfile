@@ -1,14 +1,14 @@
-FROM node:boron
+FROM node:carbon
 
 # Create app directory
 WORKDIR /usr/src/app
 
 COPY package*.json ./
 
+RUN npm install
+
 # Bundle app source
-COPY . /usr/src/app
+COPY . .
 
-RUN npm run build
-
-EXPOSE 5000
-CMD [ "npm", "run", "serve:build" ]
+EXPOSE 3000
+CMD ["npm", "start"]

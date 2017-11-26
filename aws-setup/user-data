@@ -1,0 +1,2 @@
+#!/bin/bash	
+echo ECS_CLUSTER=node-app-cluster >> /etc/ecs/ecs.config	

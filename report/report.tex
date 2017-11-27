@@ -1,0 +1,86 @@
+\documentclass[a4paper]{article}
+
+% Increase text width
+\usepackage[left=48pt,right=46pt]{geometry}
+
+% Images Stuff
+\usepackage{graphicx} % Required to insert images
+\usepackage{float} % Used to position images
+\graphicspath{ {images/} }
+
+%\setlength\parindent{0pt} % no indent for new paragraphs
+
+% Bibliography stuff
+\usepackage[round]{natbib}
+% Adds bibliography to toc
+\usepackage[nottoc,numbib]{tocbibind} 
+
+% Checkmarks
+\usepackage{amssymb}
+
+\usepackage{hyperref} % Makes toc, urls, figure links
+
+% format hyperlinks nicer than default way
+\usepackage{xcolor}
+\hypersetup{colorlinks,linkcolor={blue!80!black},citecolor={blue!80!black},urlcolor={blue!80!black}}
+
+% For inserting code blocks
+\usepackage{listings}
+\lstset{
+	basicstyle=\ttfamily,
+	columns=fullflexible,
+	frame=single,
+	breaklines=true,
+	postbreak=\mbox{\space},
+	aboveskip=20pt,
+	belowskip=20pt,
+}
+
+% Change numbering on nested enumerate
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
+% Change caption title for lslistings
+\renewcommand{\lstlistingname}{Code Sample}% Listing -> Algorithm
+
+% Add appendice titles
+\usepackage[title]{appendix}
+
+% Title Page
+\title{CI/CD with Jenkins and AWS EC2 Container Service \\ \small{Cloud Technology \\ BSc in Applied Computing Year 4}} 
+
+\author{Rob Shelly \\ \small{20068406}}
+
+
+\begin{document}
+\maketitle
+\thispagestyle{empty} % No page number of title page!
+
+\newpage
+\pagenumbering{roman}
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+\include{body/introduction}
+
+%TODO Probably replace each of these with a separate file in /body
+\section{Tools and Services}
+some background on each Jenkins, ECS, IAM, Dockerhub,
+\include{body/practical}
+
+\include{body/conclusion}
+
+
+\newpage
+\renewcommand*{\bibfont}{\raggedright}
+\bibliographystyle{plainnat}
+\bibliography{bibliography/bibtex}
+
+\begin{appendices}
+	\include{appendices/repos}
+	\include{appendices/install-jenkins}
+	%\include{appendices/launch-instance}
+\end{appendices}
+
+\end{document}          

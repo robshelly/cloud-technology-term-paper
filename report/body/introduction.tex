@@ -1,0 +1,26 @@
+\section{Introduction}
+This paper will explore continuous integration and continuous deployment (CI/CD) using a very basic sample NodeJS app design with ReactJS. The practical element of this paper will implement CI/CD using a Jenkins server and AWS EC2 Container Service. The app will be deployed though the use of a Jenkins Job through the following workflow:
+
+\begin{enumerate}
+	\item Developer performs a \textit{git push} of the apps source code to GitHub;
+	\item GitHub, detecting the \textit{push}, uses a \textbf{webhook} to a Jenkins Server to trigger a \textbf{Jenkins job};
+	\item The Jenkins job starts and completes the following build steps:
+	\begin{enumerate}
+		\item Pull the source code of the app, the including a \textbf{Dockerfile}, and build an image;
+		\item Push the image to a \textbf{Docker Hub registry};
+		\item Create a new \textbf{task definition} on ECS specifying the new image as the source Docker image;
+		\item Update an ECS \textbf{Service} to launch the new task definition on an \textbf{ECS instance}.
+	\end{enumerate}
+	\item The ECS service starts the desired number of task definitions in place of older version(s);
+	\item The task definition(s) pull the image from Docker Hub and run it in a container on the ECS instance.
+\end{enumerate}
+Terms highlighted above will be explored in the practical report.
+
+\subsection{Objectives}
+Based on the above work to be completed and the services which will be utilised, the paper has four main objectives:
+\begin{itemize}
+	\item Implement a CI/CD pipeline for a simple web app.
+	\item Examine the use of a number of Jenkins plugins to allow the execution of various build steps within a Jenkins job.
+	\item Explored AWS'  EC2 Container Server
+	\item Examine the use of AWS' IAM service as a method of securely allowing users and services to perform task on AWS.
+\end{itemize}

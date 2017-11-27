@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Objectives}{1}{subsection.1.1}
+\contentsline {section}{\numberline {2}Tools and Services}{2}{section.2}
+\contentsline {section}{\numberline {3}Practical}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}Creating the The App}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Initial ECS setup}{4}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Jenkins Setup}{6}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Jenkins Job}{6}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Credentials}{7}{subsubsection.3.4.1}
+\contentsline {section}{\numberline {4}Running the Job}{7}{section.4}
+\contentsline {section}{\numberline {5}Conclusion}{8}{section.5}
+\contentsline {section}{\numberline {6}Bibliography}{9}{section.6}
+\contentsline {section}{\numberline {A}Repos}{10}{Appendix.1.A}
+\contentsline {section}{\numberline {B}install-jenkins}{11}{Appendix.1.B}

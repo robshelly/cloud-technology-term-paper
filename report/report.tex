@@ -34,7 +34,8 @@
 	postbreak=\mbox{\space},
 	aboveskip=20pt,
 	belowskip=20pt,
-}
+	showstringspaces=false
+	}
 
 % Change numbering on nested enumerate
 \renewcommand{\labelenumii}{\theenumii}
@@ -63,12 +64,8 @@
 \newpage
 \pagenumbering{arabic}
 \include{body/introduction}
-
-%TODO Probably replace each of these with a separate file in /body
-\section{Tools and Services}
-some background on each Jenkins, ECS, IAM, Dockerhub,
+\include{body/tools-services}
 \include{body/practical}
-
 \include{body/conclusion}
 
 

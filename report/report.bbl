@@ -1,19 +1,67 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{10}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[AWS(2017)]{aws-agent}
+\bibitem[AWS(2017{\natexlab{a}})]{aws-agent}
 AWS.
-\newblock Amazon e{CS} container agent, 2017.
+\newblock Amazon {ECS} container agent, 2017{\natexlab{a}}.
 \newblock URL
   \url{http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_agent.html}.
+
+\bibitem[AWS(2017{\natexlab{b}})]{aws-instance}
+AWS.
+\newblock Amazon e{CS} container instance iam role, 2017{\natexlab{b}}.
+\newblock URL
+  \url{http://docs.aws.amazon.com/AmazonECS/latest/developerguide/instance_IAM_role.html}.
+
+\bibitem[AWS(2017{\natexlab{c}})]{ecs}
+AWS.
+\newblock Amazon {E}lastic {C}ontainer {S}ervice, 2017{\natexlab{c}}.
+\newblock URL \url{https://aws.amazon.com/ecs/}.
+
+\bibitem[AWS(2017{\natexlab{d}})]{iam}
+AWS.
+\newblock What is iam, 2017{\natexlab{d}}.
+\newblock URL
+  \url{http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html}.
 
 \bibitem[Docker(2017)]{docker}
 Docker.
 \newblock C{I}/{CD}, 2017.
 \newblock URL \url{https://www.docker.com/use-cases/cicd}.
+
+\bibitem[Ellingwood(2017)]{ellingwood}
+Justin Ellingwood.
+\newblock An introduction to continuous integration, delivery, and deployment,
+  May 2017.
+\newblock URL
+  \url{https://www.digitalocean.com/community/tutorials/an-introduction-to-continuous-integration-delivery-and-deployment}.
+
+\bibitem[GitHub(2017)]{github}
+GitHub.
+\newblock Git{H}ub's {IP} addresses, 2017.
+\newblock URL \url{https://help.github.com/articles/github-s-ip-addresses/}.
+
+\bibitem[Jenkins(2017)]{jenkins}
+Jenkins.
+\newblock Jenkins, 2017.
+\newblock URL \url{https://jenkins.io/}.
+
+\bibitem[Pittet(2017)]{pittet}
+Sten Pittet.
+\newblock Continuous integration vs. continuous delivery vs. continuous
+  deployment, 2017.
+\newblock URL
+  \url{https://www.atlassian.com/continuous-delivery/ci-vs-ci-vs-cd}.
+
+\bibitem[Ramos(2016)]{ramos}
+Marcia Ramos.
+\newblock Continuous integration, delivery, and deployment with gitlab, 08
+  2016.
+\newblock URL
+  \url{https://about.gitlab.com/2016/08/05/continuous-integration-delivery-and-deployment-with-gitlab/}.
 
 \end{thebibliography}
